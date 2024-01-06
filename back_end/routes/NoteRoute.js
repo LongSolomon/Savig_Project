@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   
   router.get('/:id', async (req, res) => {
     try {
-      console.log(process.env);
+      //console.log(process.env);
       const note = await Note.findById(req.params.id);
       if (!note) {
         return res.status(404).json({ message: 'Note not found' });

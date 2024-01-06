@@ -84,7 +84,15 @@ class Calendar extends Component {
       //console.log(action);
       if(action == 'create')
       {
-        fetch('http://localhost:5000/api/create',
+        // fetch('http://localhost:5000/api/create',
+        // {
+        //   method: 'post',
+        //   headers:{
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify(addedEvent),
+        // })
+        fetch('https://savig-project.vercel.app/api/create',
         {
           method: 'post',
           headers:{
@@ -95,7 +103,15 @@ class Calendar extends Component {
       }
       else if(action == 'delete')
       {
-        fetch('http://localhost:5000/api/delete',
+        // fetch('http://localhost:5000/api/delete',
+        // {
+        //   method: 'post',
+        //   headers:{
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({id: ev.id}),
+        // })
+        fetch('https://savig-project.vercel.app/api/delete',
         {
           method: 'post',
           headers:{
@@ -106,7 +122,15 @@ class Calendar extends Component {
       }
       else if(action == 'update')
       {
-        fetch('http://localhost:5000/api/update',
+        // fetch('http://localhost:5000/api/update',
+        // {
+        //   method: 'post',
+        //   headers:{
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify(addedEvent),
+        // })
+        fetch('https://savig-project.vercel.app/api/update',
         {
           method: 'post',
           headers:{
@@ -179,12 +203,19 @@ class Calendar extends Component {
 
   componentDidMount() {
   const that = this;
-  fetch('http://localhost:5000/api').then((response) => {return response.json()}).then((dataa) => {
+  // fetch('http://localhost:5000/api').then((response) => {return response.json()}).then((dataa) => {
+  //   //const tmp = dataa;
+  //   that.setState({data : dataa, test: "yeah",});
+  //   console.log(that.state.data);
+  //   console.log(that.state.test);
+  //   //console.log(process.env.GENERATE_SOURCEMAP);
+  // })
+  fetch('https://savig-project.vercel.app/api').then((response) => {return response.json()}).then((dataa) => {
     //const tmp = dataa;
     that.setState({data : dataa, test: "yeah",});
     console.log(that.state.data);
     console.log(that.state.test);
-    console.log(process.env.GENERATE_SOURCEMAP);
+    //console.log(process.env.GENERATE_SOURCEMAP);
   })
   .catch(console.error);
   console.log('gfsadjk');

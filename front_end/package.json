@@ -3,7 +3,7 @@
   "version": "1.2.3",
   "description": "savig",
   "main": "index.js",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://savig-project.vercel.app",
   "keywords": [
     "react",
     "reactjs",
