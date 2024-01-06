@@ -105,5 +105,5 @@ app.post('/api/update',(req, res) => {
 })
 
 app.use('/api/notes', noteRoutes);
-const host = process.env.HOST_NAME;
-app.listen(5000, host, () => {console.log("Server started on port 5000")})
+//const host = process.env.HOST_NAME;
+app.listen(5000, () => {console.log("Server started on port 5000")})
